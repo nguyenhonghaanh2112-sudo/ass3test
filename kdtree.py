@@ -334,11 +334,11 @@ def build_index(encoded_dataset, leaf_size=20):
     Returns:
         Root KDNode of the built tree.
     """
-    print(f"[Person 3] Building k-d tree (n={len(encoded_dataset):,})...")
+    print(f"Building k-d tree (n={len(encoded_dataset):,})...")
     start = time.time()
     tree = build_kdtree(encoded_dataset, depth=0, leaf_size=leaf_size)
     elapsed = time.time() - start
-    print(f"[Person 3] Tree built in {elapsed:.2f}s")
+    print(f"Tree built in {elapsed:.2f}s")
     return tree
 
 
@@ -516,7 +516,7 @@ def validate_against_baseline(tree, encoded_dataset, weights, k,
     from baseline import baseline_knn
     from data_encoder import DEGREES, DOMAINS, encode_profile
 
-    print(f"\n[Person 3] Validating against baseline ({n_queries} queries)...")
+    print(f"\nValidating against baseline ({n_queries} queries)...")
 
     all_ok = True
     for i in range(n_queries):
@@ -565,7 +565,7 @@ def validate_against_baseline(tree, encoded_dataset, weights, k,
 if __name__ == "__main__":
     from data_encoder import generate_dataset, encode_dataset, encode_profile
 
-    print("[Person 3] Running kdtree.py self-tests...\n")
+    print("Running kdtree.py self-tests...\n")
 
     # Build a tree from 5,000 profiles
     ds     = generate_dataset(n=5000, seed=42)
@@ -633,4 +633,4 @@ if __name__ == "__main__":
     # Test 7: Validate against baseline with 50 random queries
     validate_against_baseline(tree, enc_ds, [1.0] * 9, k=5, n_queries=50)
 
-    print("\n[Person 3] All kdtree.py tests PASSED ✅")
+    print("\nAll kdtree.py tests PASSED ✅")

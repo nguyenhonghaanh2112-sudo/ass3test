@@ -114,7 +114,7 @@ def validate_weights(weights, expected_length=9):
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    print("[Person 2] Running distance.py self-tests...\n")
+    print("Running distance.py self-tests...\n")
 
     w = [1.0] * 9
     v = [0.5] * 9
@@ -175,4 +175,4 @@ if __name__ == "__main__":
         pass
     print("  ✅ Test 8 PASSED: Length mismatch rejected")
 
-    print("\n[Person 2] All distance.py tests PASSED ✅")
+    print("\nAll distance.py tests PASSED ✅")

@@ -138,7 +138,7 @@ def generate_dataset(n=100_000, seed=42):
             "favourite_domain":     rng.choice(DOMAINS),
         }
         dataset.append(profile)
-    print(f"[Person 1] Generated {n:,} profiles (seed={seed})")
+    print(f"Generated {n:,} profiles (seed={seed})")
     return dataset
 
 
@@ -166,7 +166,7 @@ def save_dataset(dataset, filepath="dataset.csv"):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(dataset)
-    print(f"[Person 1] Saved {len(dataset):,} profiles → {filepath}")
+    print(f"Saved {len(dataset):,} profiles → {filepath}")
 
 
 def load_dataset(filepath="dataset.csv"):
@@ -201,7 +201,7 @@ def load_dataset(filepath="dataset.csv"):
                 "favourite_domain":     row["favourite_domain"],
             }
             dataset.append(profile)
-    print(f"[Person 1] Loaded {len(dataset):,} profiles ← {filepath}")
+    print(f"Loaded {len(dataset):,} profiles ← {filepath}")
     return dataset
 
 
@@ -414,7 +414,7 @@ def encode_dataset(dataset):
         to its vector so we can identify which profile a result belongs to.
     """
     encoded = [(p["id"], encode_profile(p)) for p in dataset]
-    print(f"[Person 1] Encoded {len(encoded):,} profiles → "
+    print(f"Encoded {len(encoded):,} profiles → "
           f"{VECTOR_LENGTH}-dim vectors")
     return encoded
 
@@ -553,7 +553,7 @@ def run_tests():
     Quick built-in smoke tests. Run via: python data_encoder.py
     All tests must pass before handing off to the team.
     """
-    print("\n[Person 1] Running built-in tests...")
+    print("\nRunning built-in tests...")
 
     # Test 1: Dataset size
     ds = generate_dataset(n=500, seed=0)
@@ -610,7 +610,7 @@ def run_tests():
     assert ds_a == ds_b, "FAIL Test 7: same seed gave different datasets"
     print("  ✅ Test 7 PASSED: Same seed → identical dataset")
 
-    print("\n[Person 1] All built-in tests PASSED ✅\n")
+    print("\nAll built-in tests PASSED ✅\n")
 
 
 # ─────────────────────────────────────────────────────────────────────────────

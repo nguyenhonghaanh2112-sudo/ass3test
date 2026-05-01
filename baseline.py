@@ -332,7 +332,7 @@ def compare_results(baseline_results, kdtree_results):
 if __name__ == "__main__":
     from data_encoder import generate_dataset, encode_dataset
 
-    print("[Person 2] Running baseline.py self-tests...\n")
+    print("Running baseline.py self-tests...\n")
 
     # Generate a small test dataset
     ds = generate_dataset(n=500, seed=0)
@@ -382,4 +382,4 @@ if __name__ == "__main__":
     compare_results(results, results)
     print("  ✅ Test 6 PASSED: display_results and compare_results work")
 
-    print(f"\n[Person 2] All baseline.py tests PASSED ✅")
+    print(f"\nAll baseline.py tests PASSED ✅")
