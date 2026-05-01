@@ -1,0 +1,4 @@
+scenario,weights,baseline_ms,kdtree_ms,speedup
+Uniform,"[1, 1, 1, 1, 1, 1, 1, 1, 1]",150.097,1.536,97.7
+Numeric+degree,"[5, 5, 5, 5, 0.1, 0.1, 0.1, 0.1, 0.1]",145.6,2.587,56.3
+Domain heavy,"[0.1, 0.1, 0.1, 0.1, 5, 5, 5, 5, 5]",156.172,1.919,81.4
